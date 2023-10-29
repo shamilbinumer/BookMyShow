@@ -109,6 +109,16 @@ input[type=date]::placeholder{
 .file{
     padding: 10px;
 }
+.view-banner{
+    width: 70%;
+    height: 200px;
+    background-color: red;
+}
+.view-poster{
+    width: 30%;
+    height: 300px;
+    background-color: red;
+}
 .sbmt-btn{
     text-align: center;
     padding-top: 20px;

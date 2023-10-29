@@ -99,6 +99,10 @@
     padding-right: 50px !important;
     
 }
+#main{
+    display: flex;
+    gap: 15px;
+}
 .fifa-banner{
     width: 100%;
     margin-top: 50px;

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register Movie</title>
-    <link rel="stylesheet" href="../css/reg.css">
+    <link rel="stylesheet" href="../css/edit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="card-details">
-        <h5>Movie Registration</h5>
+        <h5>Edit The Movie</h5>
        <form action="../index.html" id="frm"> <label for="">Movie Title</label>
         <div><input type="text" placeholder="Enter the Movie Name" class="m-name" id="movie-name"></div>
         <label for="">Movie Category</label>
@@ -36,10 +36,12 @@
        <div>
         <label for="">Upload Movie Banner</label>
         <input type="file" title="file" class="file" id="upload-banner">
+        <div class="view-banner"></div>
        </div> 
        <div>
         <label for="">Upload Movie Poster</label>
         <input type="file" title="file" class="file" id="upload-poster">
+        <div class="view-poster"></div>
        </div> 
        <div class="sbmt-btn">
         <button id="submit-btn">Submit</button></form>
