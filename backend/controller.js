@@ -30,3 +30,21 @@ export async function delMovie(req,res){
         res.status(404).send(error)
     })
 }
+// export async function editMovie(){
+//     const{id}=req.params;
+//     const value=schema.updateOne({_id:id})
+//     data.then((resp)=>{
+//         res.status(200).send(resp)
+//     }).catch((error)=>{
+//         res.status(404).send(error)
+//     })
+// }
+export async function editMovie(req, res) {
+    const {id}=req.params;
+    try{
+        const value=await schema.findOne({_id:id});
+        res.status(200).send(value);
+    }catch(error){
+        res.status(404).send(error);
+    }
+}

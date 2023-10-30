@@ -32,7 +32,8 @@ async function getDetails(){
             </div>
             <div class="languages"><span>2D,IMAX 2D</span> <SPAN>${data.Languages}</SPAN></div>
             <div class="duration">2h 44m • ${data.Category} • UA • ${data.Release_date}</div>
-            <div class="delBtn"><a href="../index.html" onclick="delMovie('${data._id}')">Delete Movie</a></div>
+            <div class="delBtn"><a href="../index.html" onclick="delMovie('${data._id}')"><button>Delete Movie</button></a></div>
+            <a href="../pages/edit.html?id=${data._id}">Edit movie</a>
         </div>`;
         document.getElementById("details").innerHTML=s
       })
