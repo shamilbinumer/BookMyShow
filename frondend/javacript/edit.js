@@ -5,7 +5,7 @@ import convertToBase64 from './base64.js';
 
   const search = new URLSearchParams(url.split("?")[1]);
   var id=search.get("id");
- let bnr=""
+ let bnr,pstr;
 
     
    fetch(`http://localhost:3004/BookMyShow/EditMovie/${id}`,{
@@ -37,12 +37,12 @@ document.getElementById("main").innerHTML=`<form action="../index.html" id="frm"
 <div>
 <label for="">Upload Movie Banner</label>
 <input type="file" title="file" class="file"   id="upload-banner">
-<div class="view-banner"><img src="${bnr}"  alt="" class="edit-background-image"></div>
+<div class="view-banner"><img src="${bnr}" id="bnr"  alt="" class="edit-background-image"></div>
 </div> 
 <div>
 <label for="">Upload Movie Poster</label>
 <input type="file" title="file" class="file" id="upload-poster">
-<div class="view-poster"><img src="${pctr}" alt="" class="edit-poster-image"></div>
+<div class="view-poster" id="aaa"><img src="${pctr}" alt="" id="pstr" class="edit-poster-image"></div>
 </div> 
 <div class="sbmt-btn">
 <button id="submit-btn">Submit</button>
@@ -61,14 +61,60 @@ document.getElementById("upload-banner").addEventListener('change',(e)=>{
        
          bnr=data
         console.log(bnr);
+        document.getElementById("bnr").src=bnr;
     })
    
 })
 
+document.getElementById("upload-poster").addEventListener('change',(e)=>{
+
+
+  convertToBase64(e.target.files[0]).then((data)=>{
+     
+       pstr=data
+      console.log(bnr);
+      document.getElementById("pstr").src=pstr;
+  })
+ 
+})
+
+})
+
+document.getElementById("frm").addEventListener("submit",async (e)=>{
+  e.preventDefault();
+  
+  // console.log(e.target[6].files[0]);
+  const banner=await convertToBase64(e.target[6].files[0])
+  console.log(banner);
+  const poster=await convertToBase64(e.target[7].files[0])
+  console.log(poster);
+  let moviename=document.getElementById("movie-name").value;
+  let moviecategory=document.getElementById("category").value;
+  let rating=document.getElementById("rating").value;
+  let rDate=document.getElementById("r-date").value;
+  let languages=document.getElementById("languages").value;
+  let description=document.getElementById("description").value;
+ 
+  fetch(`http://localhost:3004/BookMyShow/edit/${id}`,{
+   method:"PATCH",
+   headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({
+      Movie_Title:moviename,
+      Category:moviecategory,
+      Rating:rating,
+      Release_date:rDate,
+      Languages:languages,
+      Description:description,
+      Movie_banner:banner,
+      Movie_poster:poster
+     })
+}).then(()=>{
+   alert("Movie edited");
+}).catch("Error")   
+})
 
 
 
-    })
    
 
 

@@ -30,15 +30,7 @@ export async function delMovie(req,res){
         res.status(404).send(error)
     })
 }
-// export async function editMovie(){
-//     const{id}=req.params;
-//     const value=schema.updateOne({_id:id})
-//     data.then((resp)=>{
-//         res.status(200).send(resp)
-//     }).catch((error)=>{
-//         res.status(404).send(error)
-//     })
-// }
+
 export async function editMovie(req, res) {
     const {id}=req.params;
     try{
@@ -48,3 +40,16 @@ export async function editMovie(req, res) {
         res.status(404).send(error);
     }
 }
+export async function edit(req, res) {
+  try {
+    const { id } = req.params;
+    console.log(id);
+    let Movie = await schema.updateOne({ _id: id });
+    console.log(Movie);
+    res.status(200).send(Movie);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while editing the movie.");
+  }
+}
+

@@ -7,7 +7,7 @@ async function getMovie(){
         console.log(d);
         s+=`
        
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <a href="./pages/movei-details.html?id=${d._id}" title="link"><img src="${d.Movie_poster}" alt=""></a>
                 <p class="movies-p1" id="play-now-para">${d.Movie_Title}</p>            
                 <p class="movies-p2" id="play-now-para-2">${d.Languages}</p>
