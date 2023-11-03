@@ -15,11 +15,13 @@
 .main-nav-left{
     width: 70%;
     padding-top: 14px;
+    background:rgb(51, 53, 69);
     /* background-color: RED; */
 }
 .main-nav-right{
     width: 30%;
     padding-top: 20px;
+    background:rgb(51, 53, 69);
     /* background-color: yellow; */
 }
 .main-nav-left img{
@@ -62,7 +64,40 @@
     margin-left: 24px;
     font-size: 23px;
 }
-
+@media(min-width:300px) and (max-width:575.98px){
+    .main-navbar{
+        display: inline;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding: 1px;
+        text-align: center;
+    } 
+    .sgn{
+        display: none;
+    }
+    .main-nav-left input{
+        display: none;
+    }
+    .main-nav-left{
+        width: 100%;
+        padding-top:10px;
+        background:rgb(51, 53, 69);
+        /* background-color: RED; */
+    }
+    .main-nav-right{
+        width: 100%;
+        padding-top: 20px;
+        background:rgb(51, 53, 69);
+        /* background-color: yellow; */
+    }
+    .main-nav-left img{
+        width: 93%;
+    }
+    .main-nav-right i{
+       display: none;
+    }
+}
 /* //////////sec-navbar////////// */
 
 .sec-navbar{
@@ -92,7 +127,11 @@
 .sec-nav-right a{
     font-size: 12px;
 }
-
+@media(min-width:300px) and (max-width:575.98px){
+    .sec-navbar{
+       display: none;
+    } 
+}
 /* //////////movei-list/////////// */
 .movie-list{
     padding-left: 50px !important;
@@ -163,6 +202,9 @@
     color: white;
     margin-top: 0 !important;
 }
+@media(min-width:300px) and (max-width:575.98px){
+
+}
 /* /////////////////first-footer//////////// */
 .footer-first-section{
     width: 100%;
@@ -196,6 +238,25 @@
     padding: 7px 20px;
     color: white;
     border-radius: 3px;
+}
+@media(min-width:300px) and (max-width:575.98px){
+    .footer-first-section{
+        padding-top: 10px;
+       
+    }
+    .fa-home{
+        font-size: 25px !important;
+        margin-right: 10px;
+    }
+    .list-show-text{
+        font-size: 10px;
+    }
+    .gotashow-text{
+        font-size: 10px;
+    }
+    .footer-content button{
+        display: none;
+    }
 }
 /* ////////////////footer-option-section/////////////// */
 .footer-option-section{
@@ -280,4 +341,9 @@
     color: grey;
     font-size: 10px;
     margin-top: 20px;
+}
+@media(min-width:300px) and (max-width:575.98px){
+    .footer-option-section{
+        display: none;
+    }
 }

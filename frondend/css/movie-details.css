@@ -50,7 +50,40 @@
     margin-left: 24px;
     font-size: 23px;
 }
-
+@media(min-width:300px) and (max-width:575.98px){
+    .main-navbar{
+        display: inline;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding: 1px;
+        text-align: center;
+    } 
+    .sgn{
+        display: none;
+    }
+    .main-nav-left input{
+        display: none;
+    }
+    .main-nav-left{
+        width: 100%;
+        padding-top:10px;
+        background:rgb(51, 53, 69);
+        /* background-color: RED; */
+    }
+    .main-nav-right{
+        width: 100%;
+        padding-top: 20px;
+        background:rgb(51, 53, 69);
+        /* background-color: yellow; */
+    }
+    .main-nav-left img{
+        width: 93%;
+    }
+    .main-nav-right i{
+       display: none;
+    }
+}
 /* //////////sec-navbar////////// */
 
 .sec-navbar{
@@ -233,6 +266,43 @@
     border-radius: 4px;
     margin-right: 10px;
 }
+@media (min-width: 300px) and (max-width: 768px){
+    .movie-banner .movie-details-content {
+        position: relative;
+        display: inline;
+        width: 100% !important;
+    }
+    .background-image{
+       display: none !important;
+    }
+    .movie-banner::before {
+        background:black;
+    }
+    .movei-content-left{
+        padding-top: 20px;
+        width: 90%;
+    }
+    .add-yourrating-box{
+        display: flex;
+        background-color: rgb(63, 63, 63);
+        padding: 12px 0px 0px 20px !important;
+        /* padding-right: 60px; */
+    }
+    .add-yourrating-box a{
+        margin-left: 10px;
+        padding: 7px 7px;
+        font-size: 15px;
+    }
+    .delBtn button{
+        text-decoration: none;
+        background-color: rgb(248, 68, 100);
+        border: 1px solid rgb(248, 68, 100);
+        color: white;
+        padding: 5px 30px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+}
 /* ///////////////about movie/////////////// */
 .about-movie{
     padding-top: 30px;
@@ -276,6 +346,25 @@
     padding: 7px 20px;
     color: white;
     border-radius: 3px;
+}
+@media(min-width:300px) and (max-width:575.98px){
+    .footer-first-section{
+        padding-top: 10px;
+       
+    }
+    .fa-home{
+        font-size: 25px !important;
+        margin-right: 10px;
+    }
+    .list-show-text{
+        font-size: 10px;
+    }
+    .gotashow-text{
+        font-size: 10px;
+    }
+    .footer-content button{
+        display: none;
+    }
 }
 /* ////////////////footer-option-section/////////////// */
 .footer-option-section{
@@ -360,4 +449,9 @@
     color: grey;
     font-size: 10px;
     margin-top: 20px;
+}
+@media(min-width:300px) and (max-width:575.98px){
+    .footer-option-section{
+        display: none;
+    }
 }

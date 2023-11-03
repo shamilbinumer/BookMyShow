@@ -1,4 +1,4 @@
-import schema from './user.model.js'
+import schema from './user.model.js';
 export function addTask(req,res){
     const {...movie}=req.body
     console.log(req.body);
@@ -41,15 +41,20 @@ export async function editMovie(req, res) {
     }
 }
 export async function edit(req, res) {
-  try {
     const { id } = req.params;
     console.log(id);
-    let Movie = await schema.updateOne({ _id: id });
-    console.log(Movie);
-    res.status(200).send(Movie);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("An error occurred while editing the movie.");
-  }
+    const { ...movie } = req.body;
+    await schema.updateOne({ _id: id }, { $set: { ...movie } });
+    res.status(201).send("updated")
 }
 
+export function addUser(req,res){
+    try {
+        const {user,password}=req.body;
+        if(!(user&&password))
+        return res.status(404).send("Fields are empty")
+    
+    } catch (error) {
+        
+    }
+}
