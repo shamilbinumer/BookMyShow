@@ -37,6 +37,9 @@
     color: white;
     background-color: transparent;
 }
+#name{
+    color: white;
+}
 /* .main-nav-right a{
     text-decoration: none;
     background-color: rgb(248, 68, 100);

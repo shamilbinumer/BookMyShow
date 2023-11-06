@@ -85,7 +85,7 @@ fetch(`http://localhost:3004/BookMyShow/MovieDetails/${id}`,{
                       }),
                     })
                     .then((res) => {
-                      console.log(res.status);
+                      consolec.log(res.status);
                       if (res.status !==404 ) {
                         alert("Data Added");
                       } else {
