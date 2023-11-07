@@ -94,7 +94,7 @@ export async function home(req,res)
 {
   try {
     console.log(req.user);
-    const username=req.user.user
+    const username=req.user.usr.user
     console.log(username);
     res.status(200).send({msg:`Hellow ${username}`})
   } catch (error) {

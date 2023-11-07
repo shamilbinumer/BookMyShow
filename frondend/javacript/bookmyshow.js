@@ -32,3 +32,11 @@ async function getMovie(){
    
 }
 getMovie();
+
+document.getElementById("logout").addEventListener("click",(e)=>{
+    e.preventDefault();
+        // localStorage.removeItem('token');
+        localStorage.clear()
+        location.reload();      
+
+})
