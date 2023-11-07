@@ -23,7 +23,12 @@ async function getMovie(){
    .then((res)=>res.json())
    .then((data)=>{
     const{msg}=data;
-    document.getElementById("name").innerHTML=msg
+    if(msg==undefined){
+        document.getElementById("name").innerHTML=`<button>Sign up</button>`
+    }
+    else{
+        document.getElementById("name").innerHTML=msg
+    }
    })
    .catch((error)=>{
     console.log(error);
