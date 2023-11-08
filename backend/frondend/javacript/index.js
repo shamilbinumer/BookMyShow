@@ -23,9 +23,9 @@ async function getMovie(){
    .then((res)=>res.json())
    .then((data)=>{
     const{msg}=data;
-    document.getElementById("name").innerHTML=msg?`${msg}<button class="logout" id="logout" onclick="logout()">Logout</button>
-    <a href="./pages/register-movie.html"><button class="logout">Register Movie</button></a>`:
-   `<a class="sgn" href="./register.html"><button class="logout">Sign up</button></a>`
+    document.getElementById("name").innerHTML=msg?`${msg}<button id="logout" onclick="logout()">Logout</button>
+    <a href="./pages/register-movie.html" class="logout"><button>Register</button></a>`:
+   `<a class="sgn" href="./register.html" class="logout"><button class="sgn-btn">Sign up</button></a>`
    })
    .catch((error)=>{
     console.log(error);

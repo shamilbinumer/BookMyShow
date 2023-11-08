@@ -54,14 +54,12 @@
     .main-navbar{
         display: inline;
         width: 100%;
+        height: 50px;
         padding-left: 0px;
         padding-right: 0px;
         padding: 1px;
         text-align: center;
     } 
-    .sgn{
-        display: none;
-    }
     .main-nav-left input{
         display: none;
     }
@@ -78,7 +76,40 @@
         /* background-color: yellow; */
     }
     .main-nav-left img{
-        width: 93%;
+        width: 63%;
+    }
+    .main-nav-right i{
+       display: none;
+    }
+}
+
+@media(min-width:576px) and (max-width:991.98px){
+    .main-navbar{
+        display: inline;
+        width: 100%;
+        height: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding: 1px;
+        text-align: center;
+    } 
+    .main-nav-left input{
+        display: none;
+    }
+    .main-nav-left{
+        width: 100%;
+        padding-top:10px;
+        background:rgb(51, 53, 69);
+        /* background-color: RED; */
+    }
+    .main-nav-right{
+        width: 100%;
+        padding-top: 20px;
+        background:rgb(51, 53, 69);
+        /* background-color: yellow; */
+    }
+    .main-nav-left img{
+        width: 63%;
     }
     .main-nav-right i{
        display: none;
@@ -117,9 +148,20 @@
         display: none;
     }
     .sec-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media(min-width:576px) and (max-width:991.98px){
+    .sec-nav-left, .sec-nav-right {
+        display: none;
+    }
+    .sec-navbar {
+        display: none;
     }
     .nav-toggle {
         display: block;
@@ -281,17 +323,83 @@
     .movei-content-left{
         padding-top: 20px;
         width: 90%;
+        padding-bottom: 20px;
     }
+ 
     .add-yourrating-box{
         display: flex;
         background-color: rgb(63, 63, 63);
         padding: 12px 0px 0px 20px !important;
-        /* padding-right: 60px; */
+        width: 80%;
+    }
+    .add-yourrating-box-right{
+        padding-top: 0px;
+    }
+    .add-rating-text{
+        font-size: 13px;
+    }
+    .no-matter-text{
+        font-size: 10px;
     }
     .add-yourrating-box a{
         margin-left: 10px;
         padding: 7px 7px;
-        font-size: 15px;
+        font-size: 10px;
+    }
+    .delBtn{
+        padding-bottom: 20px;
+    }
+    .delBtn button{
+        text-decoration: none;
+        background-color: rgb(248, 68, 100);
+        border: 1px solid rgb(248, 68, 100);
+        color: white;
+        padding: 5px 30px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+}
+
+@media(min-width:576px) and (max-width:991.98px){
+    .movie-banner .movie-details-content {
+        position: relative;
+        display: inline;
+        width: 100% !important;
+    }
+    .background-image{
+       display: none !important;
+    }
+    .movie-banner::before {
+        background:black;
+    }
+    .movei-content-left{
+        padding-top: 20px;
+        width: 90%;
+        padding-bottom: 20px;
+    }
+ 
+    .add-yourrating-box{
+        display: flex;
+        background-color: rgb(63, 63, 63);
+        padding: 12px 0px 0px 20px !important;
+        width: 80%;
+    }
+    .add-yourrating-box-right{
+        padding-top: 0px;
+    }
+    .add-rating-text{
+        font-size: 13px;
+    }
+    .no-matter-text{
+        font-size: 10px;
+    }
+    .add-yourrating-box a{
+        margin-left: 10px;
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+    .delBtn{
+        padding-bottom: 20px;
     }
     .delBtn button{
         text-decoration: none;
@@ -305,13 +413,19 @@
 }
 /* ///////////////about movie/////////////// */
 .about-movie{
-    padding-top: 30px;
+    padding: 30px 100px;
 }
 .about-movie h3{
     font-weight: 700;
 }
 .about-movie p{
     font-size: 16px;
+}
+@media (min-width: 300px) and (max-width: 768px){
+    .about-movie{
+        padding: 10px;
+        width: 100%;
+    }
 }
 /* /////////////////first-footer//////////// */
 .footer-first-section{
@@ -349,7 +463,8 @@
 }
 @media(min-width:300px) and (max-width:575.98px){
     .footer-first-section{
-        padding-top: 10px;
+        /* padding-top: 10px; */
+        display: none;
        
     }
     .fa-home{
@@ -453,5 +568,8 @@
 @media(min-width:300px) and (max-width:575.98px){
     .footer-option-section{
         display: none;
+    }
+    .laaast-footer{
+        width: 100%;
     }
 }

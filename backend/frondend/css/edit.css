@@ -140,31 +140,92 @@ input[type=date]::placeholder{
 
 @media (min-width:300px) and (max-width:575.98px){
     body{
-        background-color:rgb(137, 37, 37) !important;  
+        background-color:rgb(51, 53, 69);  
         padding-bottom: 30px !important;
+        text-align: center;
+    }
+    .nav-bar{
+        height: 60px;
+        margin: auto;
+    }
+    .nav-bar img{
+        width: 35%;
     }
     .main-card{
         margin-top: 12px !important;
         width: 90%;
-        margin: auto;
+        /* margin: auto; */
         /* margin-left: 30px; */
     }
     .m-name{
         /* padding: 5px 55px 5px 5px; */
         padding: 5px;
-        padding-right: 30%;
+        padding-right: 34%;
     }
     .rating{
-        padding: 5px 20px 5px 5px;
+        padding: 5px;
+        padding-right: 34%;
     }
     .r-date{
-        padding: 5px 10px 5px 5px;
+        padding: 5px;
+        padding-right: 49%;
     }
     textarea{
         padding: 5px 3px 5px 5px; 
     }
     .languages{
-        padding: 5px 33px 5px 5px;
+        padding:5px;
+        padding-right: 34%;
+    }
+    textarea::placeholder{
+        font-size: 13px;
+    }
+    .sbmt-btn button{
+        padding: 10px 60px;
+    }
+}
+
+@media (min-width:576px) and (max-width:991.98px){
+    body{
+        background-color:rgb(51, 53, 69);  
+        padding-bottom: 30px !important;
+        text-align: center;
+    }
+    .nav-bar{
+        height: 60px;
+        margin: auto;
+    }
+    .nav-left{
+        padding: 5px;
+    }
+    .nav-bar img{
+        width: 25%;
+    }
+    .main-card{
+        margin-top: 12px !important;
+        width: 90%;
+        /* margin: auto; */
+        /* margin-left: 30px; */
+    }
+    .m-name{
+        /* padding: 5px 55px 5px 5px; */
+        padding: 5px;
+        padding-right: 67%;
+    }
+    .rating{
+        padding: 5px;
+        padding-right: 67%;
+    }
+    .r-date{
+        padding: 5px;
+        padding-right: 74%;
+    }
+    textarea{
+        padding: 5px 3px 5px 5px; 
+    }
+    .languages{
+        padding:5px;
+        padding-right: 67%;
     }
     textarea::placeholder{
         font-size: 13px;
