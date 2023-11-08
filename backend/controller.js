@@ -96,7 +96,7 @@ export async function home(req,res)
     console.log(req.user);
     const username=req.user.usr.user
     console.log(username);
-    res.status(200).send({msg:`Hellow ${username}`})
+    res.status(200).send({msg:`${username}`})
   } catch (error) {
     res.status(404).send(error)
   }

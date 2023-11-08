@@ -6,6 +6,7 @@ import connection from './connection.js';
 dotenv.config()
 const app=express();
 app.use(cors())
+app.use(express.static('frondend'));
 app.use(express.json({limit:"20mb"}));
 app.use("/BookMyShow",router);
 connection().then(()=>{

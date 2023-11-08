@@ -57,9 +57,11 @@
 })(jQuery);
 //////////up-frontend///////////////
 
-
-document.getElementById('btn-register').addEventListener('click', (e) => {
-    e.preventDefault();
+document.getElementById("btn-register").addEventListener("click",function(e){
+    e.preventDefault()
+    window.location.href="../login.html";   
+})
+function reg(){
     let name = document.getElementById('fullname').value;
     let user = document.getElementById('username').value;
     let password = document.getElementById('pwd').value;
@@ -90,4 +92,43 @@ document.getElementById('btn-register').addEventListener('click', (e) => {
             console.error('Error:', error);
             alert('Server not connected');
         });
-});
+
+        
+}
+
+
+// document.getElementById("btn-register").addEventListener('click', (e) => {
+//     e.preventDefault();
+    // let name = document.getElementById('fullname').value;
+    // let user = document.getElementById('username').value;
+    // let password = document.getElementById('pwd').value;
+
+    // if (name===''||user===''||password===''){
+    //     alert('Fields Are Empty');
+    //     return;
+    // }
+
+    // fetch('http://localhost:3004/BookMyShow/adduser', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({
+    //         name: name,
+    //         user: user,
+    //         password: password
+    //     }),
+    // })
+    //     .then((res) => {
+    //         console.log(res.status);
+    //         if (res.status !== 404) {
+    //             alert('Registration Successful');
+    //         } else {
+    //             alert('Registration Failed');
+    //         }
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error:', error);
+    //         alert('Server not connected');
+    //     });
+// });
+
+
